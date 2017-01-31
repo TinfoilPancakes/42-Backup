@@ -1,0 +1,18 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"cc_include_options":
+		[
+			"-I${project_path}/libft/includes/",
+			"-I${project_path}/libft/",
+			"-I${project_path}/",
+			"-I${project_path}/includes"
+		]
+	}
+}

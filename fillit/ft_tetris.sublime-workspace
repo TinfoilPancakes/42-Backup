@@ -1,0 +1,715 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inc",
+				"include \"header\"\tKeyWord"
+			],
+			[
+				"LIB",
+				"LIBFT_DIR"
+			],
+			[
+				"DB",
+				"DEBUG"
+			],
+			[
+				"ft_putn",
+				"ft_putnbr_fd(int n, int fd)\tvoid"
+			],
+			[
+				"in",
+				"include <header>\tKeyWord"
+			],
+			[
+				"nea",
+				"nearestsquare_prev()\tint"
+			],
+			[
+				"near",
+				"nearestsquare_next(int n)\tint"
+			],
+			[
+				"nsq",
+				"nsq_bad\tint"
+			],
+			[
+				"t_",
+				"t_byte\tTypedef"
+			],
+			[
+				"tgr",
+				"tgrid_unplace(t_tgrid *tg, t_pointc guess, t_tpc pc, char id)\tvoid"
+			],
+			[
+				"i",
+				"i\tint"
+			],
+			[
+				"ini",
+				"inl_pointc_init\tMacro"
+			],
+			[
+				"ft_puts",
+				"ft_putstr(const char *s)\tvoid"
+			],
+			[
+				"init",
+				"inl_pointc_init\tMacro"
+			],
+			[
+				"t",
+				"t_pointc\tTypedef"
+			],
+			[
+				"tgrid_read",
+				"tgrid_read_pieces(t_tgrid *tg, char *file_buff, int n)\tvoid"
+			],
+			[
+				"ft_p",
+				"ft_putstr_fd(const char *s, int fd)\tvoid"
+			],
+			[
+				"ft_putrs",
+				"ft_putstr_fd(const char *s, int fd)\tvoid"
+			],
+			[
+				"EXIT",
+				"EXIT_FAILURE\tMacro"
+			],
+			[
+				"tet",
+				"tetris_point.h"
+			],
+			[
+				"intl_t",
+				"inl_pointc_init\tMacro"
+			],
+			[
+				"inl_p",
+				"inl_pointc_add(a, b)\tMacro"
+			],
+			[
+				"tg",
+				"tgrid_resize(t_tgrid *tgrid, int nsize)\tvoid"
+			],
+			[
+				"inl_po",
+				"inl_pointc_init\tMacro"
+			],
+			[
+				"incl",
+				"include \"header\"\tKeyWord"
+			],
+			[
+				"ANSI",
+				"ANSI_F_GREEN\tMacro"
+			],
+			[
+				"ANSI_RED",
+				"ANSI_F_RED\tMacro"
+			],
+			[
+				"get",
+				"get_next_line"
+			],
+			[
+				"nex",
+				"next_line"
+			],
+			[
+				"new",
+				"ft_vec_new"
+			],
+			[
+				"ft_vec",
+				"ft_vec_append"
+			],
+			[
+				"buff_4",
+				"buff_4096"
+			],
+			[
+				"buf",
+				"buff_32"
+			],
+			[
+				"bu",
+				"buff_16"
+			],
+			[
+				"buff",
+				"buff_128"
+			],
+			[
+				"gen",
+				"get_next_line.c"
+			],
+			[
+				"ft_putnb",
+				"ft_putnbr(int n)\tvoid"
+			],
+			[
+				"BUF",
+				"BUFF_SIZE\tMacro"
+			],
+			[
+				"C_F",
+				"C_FLAGS"
+			],
+			[
+				"EX",
+				"EXIT_FAILURE\tMacro"
+			],
+			[
+				"line",
+				"line_count\tsize_t"
+			],
+			[
+				"timm",
+				"timmy_test_b.txt"
+			],
+			[
+				"O_RD",
+				"O_RDONLY\tMacro"
+			],
+			[
+				"Timm",
+				"timmy_test_interleave.txt"
+			],
+			[
+				"lin",
+				"line_count\tsize_t"
+			],
+			[
+				"test",
+				"test_basic.txt"
+			],
+			[
+				"ft_put",
+				"ft_putstr(const char *s)\tvoid"
+			],
+			[
+				"get_ne",
+				"get_next_line(int fd, char **line)\tint"
+			],
+			[
+				"LIBF",
+				"LIBFT_DIR"
+			],
+			[
+				"ft_pu",
+				"ft_putstr(const char *s)\tvoid"
+			],
+			[
+				"open",
+				"open(const char *, int, ...)\tint"
+			],
+			[
+				"read",
+				"read(int, void *, size_t)\tssize_t"
+			],
+			[
+				"ft_vec_new",
+				"ft_vec_new(size_t step)\tt_vector *"
+			],
+			[
+				"b",
+				"bytes_read\tsize_t"
+			],
+			[
+				"by",
+				"bytes_read"
+			],
+			[
+				"ft_subs",
+				"ft_strsub(const char *s, unsigned int start, size_t n)\tchar *"
+			],
+			[
+				"ft_han",
+				"ft_fhandle_create(int fd)\tt_fhandle"
+			],
+			[
+				"ft_v",
+				"ft_vec_pop"
+			],
+			[
+				"ft_",
+				"ft_vec_append"
+			],
+			[
+				"ft_ato",
+				"ft_atoi"
+			],
+			[
+				"ft_atoi",
+				"ft_atoi_generic"
+			],
+			[
+				"ft_stri",
+				"ft_striteri"
+			],
+			[
+				"ft_it",
+				"ft_itoa"
+			],
+			[
+				"ft_itoa",
+				"ft_itoa_generic"
+			],
+			[
+				"ft_putnbr",
+				"ft_putnbr_fd"
+			],
+			[
+				"ft_putendl",
+				"ft_putendl_fd"
+			],
+			[
+				"ft_putstr",
+				"ft_putstr_fd"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control Up",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"List Pa",
+				"Package Control: List Packages"
+			],
+			[
+				"Remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Glue",
+				"Glue - Launch"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"OPEN",
+				"File Navigator: Open"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"File: Searc",
+				"File: Search Files"
+			],
+			[
+				"Insall",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Add Repository"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"Install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 194.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/includes",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/src"
+	],
+	"file_history":
+	[
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/src/tgrid_init.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/includes/tetris_grid.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/makefile",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/src/main.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fillit/src/main.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/src/tpc_parse.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/src/tgrid_solve.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/includes/tetris_piece.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/includes/tetris_point.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/libft/libft.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/libft/ft_memset.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/src/tgrid_place.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/src/tgrid_unplace.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/blocks.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/sqsize_check.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/src/tgrid_read_pieces.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/src/tgrid_resize.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/src/tgrid_validate_pieces.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/numbers.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/valid_peices.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/FillitNotes.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/test_against/src/solver.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/pie_samples_txt.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/10_same.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/test_against/samples/test_11",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/test_against/samples/bad_test",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/11_pcs.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/test_against/Makefile",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/test_against/samples/backslash_0",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/test_against/samples/bad_test_2",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/src/tgrid_buff_init.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/test_against/.gitignore",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/libft-working/__beta_memset.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/includes/ft_tetris.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/includes/ft_point.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/ft_tetris.sublime-project",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/src/tpc_init.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/ft_tetris.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/tetris_piece.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/includes",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/Fillit Notes.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/gnl-testing-tools/Fillit Notes.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/gnl-testing-tools/gnl_test.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/gnl-testing-tools/makefile",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/gnl-testing-tools/ft_ansi.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/gnl-testing-tools/test_null_cases.txt",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/libft/ft_lstmap.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/get_next_line.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/get_next_line.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/gnl-testing-tools/moulitest_files/Makefile",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/gnl-testing-tools/moulitest_files/get_next_line_tests/Makefile",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/gnl-testing-tools/moulitest_files/get_next_line_tests/tests/01_test_simple.spec.c",
+		"/nfs/2016/p/ppatil/Documents/Misc/Halo Install Instructions.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/makefile",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/gnl_src_cpy.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/gnl_test.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/test_basic.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/timmy_test_interleave.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/gnl_test.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/libft-testing-tools/makefile",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/timmy_test_b.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/test_null_cases.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/gnl_tester",
+		"/nfs/2016/p/ppatil/Documents/Misc/Halo Tourney Guest List.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/timmy_test_a.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/ft_vec_resize.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/test.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/test.txt",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/ft_strlen.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/ft_vec_append.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/libft.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/includes/libft.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/makefile",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/ft_vec_at.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/ft_vec_copy.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/ft_vec_del.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/ft_vec_move.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/ft_vec_new.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/ft_vec_newn.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/ft_vec_pop.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/ft_vec_pop_s.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/gnl-staging.sublime-project",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/get-next-line-staging.sublime-project",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/get_next_line.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/ft_lstnew.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/get-next-line-staging/libft/._get-next-line-staging.sublime-project",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_lstnew.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_lstnew.",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_count_digits.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_isalnum.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_isalpha.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_isascii.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_isdigit.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_isprint.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_isspace.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_itoa.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_itoa_generic.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_lstadd.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_lstdel.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_lstdelone.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_lstiter.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_lstmap.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_memalloc.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_memccpy.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_memchr.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_memcmp.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_memcpy.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_memdel.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_memmove.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_memory.h",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_memrcpy.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_memset.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_putchar.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_putchar_fd.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_putendl.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_putendl_fd.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_putnbr.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_putnbr_fd.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_putnbr_generic.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_putstr.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_putstr_fd.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_strcat.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_strchr.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_strclr.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_strcmp.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_strcpy.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_strdel.c",
+		"/nfs/2016/p/ppatil/Documents/Projects/42/fuckoff/ft_strdup.c"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"<open folders>",
+			"/nfs/2016/p/ppatil/Documents/Rubbish/fillit-working/libft",
+			"<open folders>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\\s[^\\(\\s]+?\\(.+?\\)",
+			"\\s.+?(.+?)",
+			"\\s.+?(.?)",
+			"\\s.+?(.)",
+			"\\s+(.+?);",
+			"\\S(.+?);",
+			"(.+?);",
+			"memset",
+			"bzero",
+			"memset",
+			"inl_tpc_cpy",
+			"inl_tpc_eql",
+			"inl_pointc_iseq",
+			"inl_pointc_mult",
+			"inl_pointc_sub",
+			"inl_pointc_add",
+			"inl_pointc_cpy",
+			"inl_pointc_init",
+			"inl_tpc_init",
+			"inl_tgrid_p",
+			"inl_tgrid_init",
+			"inl_is_valid",
+			"g_loc",
+			"32",
+			"i",
+			"buf[i]",
+			"read",
+			"a",
+			"bytes_read",
+			"\\t(\\d+)\\n",
+			"a",
+			"tgrid",
+			"pt",
+			"tgrid",
+			"gloc",
+			"grid",
+			"n",
+			" : 1",
+			"un",
+			"signed",
+			" : 3",
+			"line",
+			"ine",
+			"src",
+			"BYELLOW",
+			"%zu\\t",
+			"[3",
+			"_F",
+			"YELLOW",
+			"===========\n",
+			"42",
+			" = ",
+			"\nbuff_1 : $(eval TEST_BUFF_SIZE = 1) $(NAME)\n",
+			"\t",
+			"\"\n",
+			"PATH",
+			"’",
+			"‘",
+			"’",
+			"‘",
+			"fd_i",
+			";\n",
+			"define",
+			"handle",
+			"include ",
+			"#include",
+			"\"\n",
+			"libft",
+			"#include \"ft_",
+			"#include \"ft_.+\" ",
+			".c",
+			"$(SRC_DIR)"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"INL_TPC_CPY",
+			"INL_TPC_EQL",
+			"INL_POINTC_ISEQ",
+			"INL_POINTC_MULT",
+			"INL_POINTC_SUB",
+			"INL_POINTC_ADD",
+			"INL_POINTC_CPY",
+			"INL_POINTC_INIT",
+			"INL_TPC_INIT",
+			"INL_TGRID_P",
+			"INL_TGRID_INIT",
+			"\\t\\{\\1\\},\\n",
+			"\\t{\\1},\\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 68.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.cc":
+	{
+		"height": 148.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ft_tetris.sublime-project",
+	"replace":
+	{
+		"height": 114.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"last_automatic_layout":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		]
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 248.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"cc_include_options":
+		[
+			"-I${project_path}/libft/inc",
+			"-I${project_path}/lib3d/inc",
+			"-I${project_path}/libmlx/",
+			"-I${project_path}/",
+			"-I${project_path}/includes",
+			"-I${project_path}/inc"
+		]
+	}
+}
