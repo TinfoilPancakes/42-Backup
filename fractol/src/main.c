@@ -10,30 +10,37 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mlx.h"
+/*
+**	http://glslsandbox.com/e#38076.28 - GPU based julia fractol.
+*/
+
+#include "mlx_wrapper.h"
 #include "libft.h"
 #include "lib3d.h"
 #include "fractol.h"
 
-t_color	test_colorize(void *args, t_vec2f pos)
-{
-	(void)args;
-	(void)pos;
-	return (color_init(255, 128, 128));
-}
+
 
 int	main(void)
 {
-	t_img_buff	image;
-	void	*mlx_context;
-	void	*mlx_window;
+	t_img_buff	buffer;
+	t_mlxw		wrap;
+	t_vec2f		complex_pos;
+	t_vec2f		viewport_delta;
+	void		*temp;
 
-	mlx_context = mlx_init();
-	mlx_window = mlx_new_window(mlx_context, 1280, 800, "fractol ~");
-	image = img_buff(mlx_context, 1280, 800);
-	fract_plot(&image, NULL, test_colorize);
-	mlx_put_image_to_window(mlx_context, mlx_window, image.img_ptr, 0, 0);
-	mlx_do_key_autorepeatoff(mlx_context);
-	mlx_loop(mlx_context);
+	wrap = mlxw();
+	mlxw_window_create(&wrap, 1280, 800, "fractol");
+	buffer = img_buff(wrap.mlx_ptr, 1280, 800);
+	temp = &buffer;
+	ft_vec_push(&wrap.argument_list, &temp);
+	complex_pos = vec2f_init(0.5, 0.5);
+	temp = &complex_pos;
+	ft_vec_push(&wrap.argument_list, &temp);
+	viewport_delta = vec2f_init(0, 0);
+	temp = &viewport_delta;
+	ft_vec_push(&wrap.argument_list, &temp);
+	mlxw_init_events(&wrap);
+	mlxw_launch(&wrap);
 	return 0;
 }
