@@ -34,6 +34,4 @@ void	ft_putnbr(int n);
 
 void	ft_putnbr_generic(long n, size_t b, int fd, const char *fmt);
 
-int		ft_printf(const char *format, ...);
-
 #endif

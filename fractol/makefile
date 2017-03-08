@@ -11,10 +11,10 @@
 # **************************************************************************** #
 
 NAME	:= fractol
-N_FLAGS	:= -framework OpenGL -framework AppKit
+N_FLAGS	:= -framework OpenGL -framework AppKit -O3
 
 CC		:= cc
-C_FLAGS	:= -Wall -Wextra -Werror
+C_FLAGS	:= -Wall -Wextra -Werror -O3
 
 SRC_DIR := ./src
 INC_DIR	:= ./inc

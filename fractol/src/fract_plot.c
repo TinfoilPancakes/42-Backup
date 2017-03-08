@@ -13,8 +13,8 @@
 #include "fractol.h"
 
 /*
-**	Should iterate over the image correctly. Need to make sure doesn't go out of bounds.
-**	-fsanitize=address to the rescueeeee!
+**	Should iterate over the image correctly. Need to make sure doesn't go out 
+**	of bounds. -fsanitize=address to the rescueeeee!
 */
 
 void	fract_plot(t_img_buff *img, void *a, t_color f(void *a, t_vec2f p))

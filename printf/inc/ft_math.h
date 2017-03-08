@@ -18,6 +18,8 @@
 
 long	ft_abs(long n);
 
+double	ft_pow(double num, t_i64 exp);
+
 size_t	ft_count_digits(long n, size_t base);
 
 #endif

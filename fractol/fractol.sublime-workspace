@@ -3,15 +3,147 @@
 	{
 		"selected_items":
 		[
+			[
+				"vec2f",
+				"vec2f_init(float x, float y)\tt_vec2f"
+			],
+			[
+				"c",
+				"c_pos\tt_vec2f *"
+			],
+			[
+				"pix",
+				"pixel_pos\tt_vec2f"
+			],
+			[
+				"color",
+				"color_init(unsigned char r, unsigned char g, unsigned char b)\tt_color"
+			],
+			[
+				"spr",
+				"sprintf(char *restrict, const char *restrict, ...)\tint"
+			],
+			[
+				"mlx_",
+				"mlx_window_ptr\tvoid *"
+			],
+			[
+				"spri",
+				"sprintf(char *restrict, const char *restrict, ...)\tint"
+			],
+			[
+				"col",
+				"color_init(unsigned char r, unsigned char g, unsigned char b)\tt_color"
+			],
+			[
+				"ml",
+				"mlx_ptr\tvoid *"
+			],
+			[
+				"clo",
+				"clock()\tclock_t"
+			],
+			[
+				"clock",
+				"clock_t\tTypedef"
+			],
+			[
+				"inc",
+				"include <header>\tKeyWord"
+			],
+			[
+				"ft_vec",
+				"ft_vec_at(t_vector *v, size_t index)\tvoid *"
+			],
+			[
+				"buf",
+				"buff\tt_img_buff *"
+			],
+			[
+				"b",
+				"buff\tt_img_buff *"
+			],
+			[
+				"vec",
+				"t_vec2f"
+			],
+			[
+				"img",
+				"img\tt_img_buff *"
+			],
+			[
+				"mlx",
+				"mlx_ptr\tvoid *"
+			],
+			[
+				"buff",
+				"buff_display(t_mlxw *thing)\tvoid"
+			],
+			[
+				"t_mlx",
+				"t_mlxw\tTypedef"
+			],
+			[
+				"vec3f",
+				"vec3f()\tt_vec3f"
+			],
+			[
+				"vec2",
+				"vec2f_init(float x, float y)\tt_vec2f"
+			],
+			[
+				"img_nb",
+				"img_buff(void *mlx_ptr, int width, int height)\tt_img_buff"
+			],
+			[
+				"VEC2F_",
+				"VEC2F_DIV(l, r)\tMacro"
+			],
+			[
+				"mlx_do_key",
+				"mlx_do_key_autorepeatoff(void *mlx_ptr)\tint"
+			],
+			[
+				"mlx_lo",
+				"mlx_loop(void *mlx_ptr)\tint"
+			],
+			[
+				"mlxw_",
+				"mlxw_launch"
+			],
+			[
+				"mlx_loop_",
+				"mlx_loop_hook(void *mlx_ptr, int (*funct_ptr)(), void *param)\tint"
+			],
+			[
+				"mlxw_ke",
+				"mlx_keydown_capture(int keycode, void *params)\tvoid"
+			],
+			[
+				"t_ml",
+				"t_mlxw\tTypedef"
+			],
+			[
+				"mlx_window",
+				"mlx_destroy_window(void *mlx_ptr, void *win_ptr)\tint"
+			],
+			[
+				"m",
+				"mlxw_window_create"
+			],
+			[
+				"s_",
+				"s_mlx_wrapper\tstruct"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "makefile",
+			"file": "inc/fractol.h",
 			"settings":
 			{
-				"buffer_size": 2262,
+				"buffer_size": 1064,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -20,25 +152,25 @@
 			"file": "src/main.c",
 			"settings":
 			{
-				"buffer_size": 911,
+				"buffer_size": 4245,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "includes.mk",
+			"file": "src/mlxw_init_events.c",
 			"settings":
 			{
-				"buffer_size": 981,
+				"buffer_size": 2498,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "sources.mk",
+			"file": "src/fract_plot.c",
 			"settings":
 			{
-				"buffer_size": 893,
+				"buffer_size": 1339,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -51,10 +183,42 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 167.0,
-		"last_filter": "Preferences",
+		"height": 191.0,
+		"last_filter": "boxy theme",
 		"selected_items":
 		[
+			[
+				"boxy theme",
+				"Boxy Theme: Activation"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"ssc",
+				"Set Syntax: C"
+			],
+			[
+				"new File",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"New F",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"NEW FILE",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"Install P",
+				"Package Control: Install Package"
+			],
+			[
+				"ssC",
+				"Set Syntax: C"
+			],
 			[
 				"Preferences",
 				"Preferences: Package Control Settings – User"
@@ -68,7 +232,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 485.0
+		"width": 431.0
 	},
 	"console":
 	{
@@ -88,18 +252,38 @@
 	},
 	"expanded_folders":
 	[
-		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol",
-		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/src"
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol"
 	],
 	"file_history":
 	[
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/src/fract_plot.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/inc/mlx_wrapper.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/src/mlxw_init_events.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/libft/inc/ft_vector.h",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/src/mlxw_launch.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/src/mlxw.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/lib3d/makefile",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/libft/makefile",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/libmlx/Makefile",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/src/main.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/makefile",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/sources.mk",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/src/mlxw_destroy.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/src/mlxw_window_create.c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/inc/img_buffer.h",
+		"/Volumes/Storage/cache/library.ppatil/Application Support/Sublime Text 3/Packages/Boxy Theme Addon - Font Face/Boxy Monokai.sublime-theme",
+		"/nfs/2016/p/ppatil/Downloads/slack_logs.tsv",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/src/mlxw_launch,c",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/libft/src/ft_lstdelone.c",
+		"/nfs/2016/p/ppatil/.zshenv",
+		"/nfs/2016/p/ppatil/Documents/Rubbish/fractol/includes.mk",
 		"/nfs/2016/p/ppatil/Documents/Rubbish/fdf/lib3d/inc/color.h",
 		"/Volumes/Storage/cache/library.ppatil/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/private/tmp/csummers/makefile"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 48.0
 	},
 	"find_in_files":
 	{
@@ -113,6 +297,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"scale",
+			"dimensions",
+			"v",
+			"ldim",
+			"buff",
+			"static",
+			"Sans-Serif",
+			"mlx_wrapper",
+			"a",
+			"\t\n",
+			"glslsandbox",
+			"t_mlx_wrapper",
+			"f_ptr"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -135,27 +332,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "makefile",
+					"file": "inc/fractol.h",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2262,
+						"buffer_size": 1064,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2066,
-								2066
+								909,
+								909
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
+							"syntax": "Packages/C++/C++.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 209.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -167,23 +364,24 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 911,
+						"buffer_size": 4245,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								910,
-								910
+								2413,
+								2413
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C.sublime-syntax"
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1498.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -191,27 +389,28 @@
 				},
 				{
 					"buffer": 2,
-					"file": "includes.mk",
+					"file": "src/mlxw_init_events.c",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 981,
+						"buffer_size": 2498,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								937,
-								937
+								2247,
+								2247
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 908.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -219,27 +418,28 @@
 				},
 				{
 					"buffer": 3,
-					"file": "sources.mk",
+					"file": "src/fract_plot.c",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 893,
+						"buffer_size": 1339,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								892,
-								892
+								1102,
+								1102
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 127.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -250,11 +450,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 29.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 45.0
 	},
 	"layout":
 	{
@@ -291,7 +491,7 @@
 	"project": "fractol.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 54.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -300,6 +500,34 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"fract_p",
+				"src/fract_plot.c"
+			],
+			[
+				"ft_vec",
+				"libft/inc/ft_vector.h"
+			],
+			[
+				"ma",
+				"src/main.c"
+			],
+			[
+				"mlx_wrap",
+				"inc/mlx_wrapper.h"
+			],
+			[
+				"",
+				"inc/mlx_wrapper.h"
+			],
+			[
+				"main.",
+				"src/main.c"
+			],
+			[
+				"main",
+				"src/main.c"
+			]
 		],
 		"width": 0.0
 	},

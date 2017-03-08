@@ -39,6 +39,7 @@ struct	s_mlx_wrapper
 	void		*mlx_ptr;
 	void		*mlx_window_ptr;
 	char		keystates[MLX_KEYSTATE_SIZE];
+	t_vec3f		mouse_state;
 	t_vector	argument_list;
 	t_vector	mlx_op_queue;
 };

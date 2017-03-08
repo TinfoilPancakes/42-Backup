@@ -24,6 +24,7 @@ C_FILES =	ft_bzero.c \
 
 # Math
 C_FILES +=	ft_abs.c \
+			ft_pow.c \
 			ft_count_digits.c
 
 # I/O
@@ -109,3 +110,8 @@ C_FILES +=	ft_swap.c \
 			ft_heapsort.c \
 			reheap_up.c \
 			reheap_down.c
+
+# Floats (conversion to string...)
+C_FILES +=	f64_expb.c \
+			f64_expd.c \
+			f64_toa_gen.c

@@ -17,6 +17,7 @@ t_mlxw	mlxw(void)
 	t_mlxw	mlx_object;
 
 	ft_memset(mlx_object.keystates, 0, MLX_KEYSTATE_SIZE);
+	mlx_object.mouse_state = vec3f();
 	mlx_object.mlx_ptr = mlx_init();
 	mlx_object.mlx_window_ptr = NULL;
 	mlx_object.argument_list = ft_vec_new(sizeof(void *));

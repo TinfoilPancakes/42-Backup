@@ -13,7 +13,26 @@
 #include "mlx_wrapper.h"
 #include "ft_output.h"
 
-#include <stdio.h>
+static int	mlx_mouse_pos_capture(int x, int y, void *params)
+{
+	t_mlxw	*mlxw;
+
+	mlxw = (t_mlxw *)params;
+	mlxw->mouse_state.x = x;
+	mlxw->mouse_state.y = y;
+	return (0);
+}
+
+static int	mlx_mouse_click_capture(int button, int x, int y, void *params)
+{
+	t_mlxw	*mlxw;
+
+	mlxw = (t_mlxw *)params;
+	(void)x;
+	(void)y;
+	mlxw->mouse_state.z = button;
+	return (0);
+}
 
 static int	mlx_keydown_capture(int keycode, void *params)
 {
@@ -37,19 +56,13 @@ int	mlx_wrapper_loop(void *params)
 {
 	t_mlxw		*mlxw;
 	t_mlx_op	*iter;
-	int			debug;
 
 	mlxw = (t_mlxw *)params;
 	iter = mlxw->mlx_op_queue.data;
-	debug = 1;
-	printf("Ops: %lu\n", mlxw->mlx_op_queue.count);
 	while (iter < (t_mlx_op *)mlxw->mlx_op_queue.end)
 	{
-		printf("Running op # %d\n", debug);
 		(*iter)(mlxw);
 		iter++;
-		debug++;
-		printf("Done.\n");
 	}
 	return (0);
 }
@@ -58,6 +71,8 @@ static int	mlx_expose_callback(t_mlxw *mlxw)
 {
 	mlx_hook(mlxw->mlx_window_ptr, 2, 0, mlx_keydown_capture, mlxw);
 	mlx_hook(mlxw->mlx_window_ptr, 3, 0, mlx_keyup_capture, mlxw);
+	mlx_hook(mlxw->mlx_window_ptr, 6, 0, mlx_mouse_pos_capture, mlxw);
+	mlx_mouse_hook(mlxw->mlx_window_ptr, mlx_mouse_click_capture, mlxw);
 	mlx_loop_hook(mlxw->mlx_ptr, mlx_wrapper_loop, mlxw);
 	return (1);
 }

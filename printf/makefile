@@ -24,16 +24,19 @@ OBJ_DIR	:= ./obj
 
 -include sources.mk
 
-SOURCES	:= $(addprefix $(SRC_DIR)/, $(C_FILES))
-INCUDES	:= $(addprefix -I , $(INC_DIR))
-OBJECTS	:= $(addprefix $(OBJ_DIR)/, $(patsubst %.c, %.o, $(C_FILES)))
+SOURCES		:= $(addprefix $(SRC_DIR)/, $(C_FILES))
+INCLUDES	:= $(addprefix -I , $(INC_DIR))
+OBJECTS		:= $(addprefix $(OBJ_DIR)/, $(patsubst %.c, %.o, $(C_FILES)))
 
 all : $(NAME)
+
+test : $(NAME)
+	$(CC) $(C_FLAGS) beta/main.c -L . -lprintf $(INCLUDES) -o thing.out
 
 # Implicit rule for object files
 $(OBJ_DIR)/%.o : $(SRC_DIR)/%.c
 	@mkdir -p $(OBJ_DIR)
-	$(CC) $(C_FLAGS) -c $< -o $@ $(INCUDES)
+	$(CC) $(C_FLAGS) -c $< -o $@ $(INCLUDES)
 
 $(NAME) : $(OBJECTS)
 	@echo "Archiving $(@)..."
