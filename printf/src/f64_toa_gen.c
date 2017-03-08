@@ -14,7 +14,11 @@
 #include "ft_math.h"
 #include "ft_string.h"
 
-#include <stdio.h>
+/*
+**	Works, but barely -- When passing a float variable, the implicit
+**	cast causes the multiplication by power to fail...
+**	Why? I have no fucking clue.
+*/
 
 static long long	f64_toa_round(double f)
 {
@@ -30,36 +34,33 @@ static long long	f64_toa_round(double f)
 	return (i_value);
 }
 
-char				*f64_toa_gen(double num, size_t b, const char *fmt)
+char				*f64_toa_gen(t_f64 num, size_t b, const char *fmt, int p)
 {
-	int			exponential;
-	long long	significand;
-	char		*numeric_string = NULL;
+	int			exp;
+	long long	sig;
+	char		*n_str;
 	char		*iter;
 
-	exponential = f64_expd(num);
-	significand = f64_toa_round(num * ft_pow(b, exponential));
-
-	printf("num: %f\n", num);
-	printf("exponential: %d\n", exponential);
-	printf("significand: %lld\n", significand);
-	printf("significand (no round): %f\n", (num * ft_pow(10, 19)));
-
-	numeric_string = ft_strnew(exponential + ft_count_digits((int)num, b) + (size_t)(num < 0 ? 2 : 1));
-	iter = numeric_string + exponential + ft_count_digits((int)num, b) + (num < 0 ? 1 : 0);
+	exp = f64_expd(num);
+	if (exp > p)
+		exp = p;
+	sig = f64_toa_round(num * ft_pow(10.0, exp));
+	n_str = ft_strnew(exp + ft_count_digits((int)num, b) + (size_t)
+		(num < 0 ? 2 : 1));
+	iter = n_str + exp + ft_count_digits((int)num, b) + (num < 0 ? 1 : 0);
 	if (num < 0)
-		*numeric_string = fmt[0];
-	while (significand || exponential >= 0)
+		*n_str = fmt[0];
+	while (sig || exp >= 0)
 	{
-		*iter = fmt[(significand % b) + 1];
-		significand /= b;
-		exponential--;
+		*iter = fmt[(sig % b) + 1];
+		sig /= b;
+		exp--;
 		iter--;
-		if (exponential == 0)
+		if (exp == 0)
 		{
 			*iter = fmt[b + 1];
 			iter--;
 		}
 	}
-	return (numeric_string);
+	return (n_str);
 }

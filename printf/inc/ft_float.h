@@ -27,6 +27,6 @@ int		f64_expb(t_f64 f);
 
 int		f64_expd(t_f64 f);
 
-char	*f64_toa_gen(double num, size_t b, const char *fmt);
+char	*f64_toa_gen(double num, size_t b, const char *fmt, int p);
 
 #endif

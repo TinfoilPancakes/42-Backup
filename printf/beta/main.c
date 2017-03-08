@@ -17,9 +17,9 @@
 
 int main(void)
 {
-	float test_thing = 0.000210;
-
-	printf("std printf: %f\n", test_thing);
-	printf("ft  printf: %s\n", f64_toa_gen(test_thing, 10, "-0123456789."));
+	float test_thing = 0.00210;
+	// double test_thing_thing = test_thing;
+	printf("std printf: %.21f\n", test_thing);
+	printf("ft  printf: %s\n", f64_toa_gen(test_thing, 10, "-0123456789.", 25));
 	return 0;
 }
