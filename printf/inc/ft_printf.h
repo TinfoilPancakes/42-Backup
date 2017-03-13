@@ -13,51 +13,77 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stdarg.h>
 # include "ft_string.h"
-# include "ft_vector.h"
 
-struct	s_pf_flag
+struct	s_pf_format_flags
 {
-	char	*flag_str;
-	size_t	count;
+	unsigned int	minus : 1;
+	unsigned int	plus : 1;
+	unsigned int	space : 1;
+	unsigned int	pound : 1;
+	unsigned int	zero : 1;
 };
 
-typedef	struct s_pf_flag	t_pff;
+typedef	struct s_pf_format_flags t_pff_format;
 
-struct	s_pf_fmt_block
+struct	s_pf_min_width_flag
 {
-	char	*start;
-	t_pff	behavior;
-	t_pff	min_width;
-	t_pff	precision;
-	t_pff	length;
-	t_pff	conversion;
+	unsigned int	exists : 1;
+	unsigned int	star : 1;
+	unsigned int	min_width : 30;
 };
 
-typedef	struct s_pf_fmt_block	t_pffb;
+typedef	struct s_pf_min_width_flag t_pff_min_width;
 
-t_pff	pf_get_conversion_flag(const char *fmt)
+struct	s_pf_precision_flag
 {
-	t_pff	flag;
+	unsigned int	exists : 1;
+	unsigned int	star : 1;
+	unsigned int	precision : 30;
+};
 
-	flag.flag_str = NULL;
-	fmt++;
-	while (*fmt && !flag.flag_str)
-	{
-		if (ft_strchr("%sSpdDioOuUxXcCfF", *fmt))
-		{
-			flag.flag_str = (char *)fmt;
-			flag.count = 1;
-		}
-		fmt++;
-	}
-	while(ft_strchr("hljz", *(flag.flag_str - 1)))
-	{
-		flag.flag_str--;
-		flag.count++;
-	}
-	return (flag);
-}
+typedef	struct s_pf_precision_flag	t_pff_precision;
+
+struct	s_pf_length_flag
+{
+	unsigned int	h : 2;
+	unsigned int	l : 2;
+	unsigned int	j : 1;
+	unsigned int	z : 1;
+	unsigned int	t : 1;
+	unsigned int	L : 1;
+};
+
+typedef	struct s_pf_length_flag t_pff_length;
+
+struct	s_pf_arg_format
+{
+	t_pff_format	fmt;
+	t_pff_min_width	mw;
+	t_pff_precision	prec;
+	t_pff_length	len;
+	char			conversion;
+	size_t			arg_length;
+	void			*arg;
+};
+
+typedef	struct s_pf_arg_format	t_pf_argument;
+
+/*
+**	This whole section is just for the conversions... FML
+**	this is one ugly thing...
+*/
+
+t_pf_argument	pf_argument(void);
+
+char			*pff_parse_format(char *fmt, t_pf_argument *arg);
+
+char			*pff_parse_min_width(char *fmt, t_pf_argument *arg);
+
+char			*pff_parse_precision(char *fmt, t_pf_argument *arg);
+
+char			*pff_parse_length(char *fmt, t_pf_argument *arg);
+
+char			*pff_parse_conversion(char *fmt, t_pf_argument *arg);
 
 #endif

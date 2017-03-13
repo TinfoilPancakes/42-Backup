@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   pff_parse_format.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppatil <ppatil@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/07 14:42:31 by ppatil            #+#    #+#             */
-/*   Updated: 2017/03/07 14:42:31 by ppatil           ###   ########.fr       */
+/*   Created: 2017/03/13 11:56:38 by ppatil            #+#    #+#             */
+/*   Updated: 2017/03/13 11:56:38 by ppatil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_float.h"
-#include <stdio.h>
+#include "ft_printf.h"
 
-#define TEST_FLOAT 0.00021
-
-int main(void)
+char	*pff_parse_format(char *fmt, t_pf_argument *arg)
 {
-	float test_thing = 3.75;
-	// double test_thing_thing = test_thing;
-	printf("std printf: %10.2f\n", test_thing);
-	printf("ft  printf: %s\n", FTOA_B(test_thing, 6));
-	return 0;
+	while (ft_strchr("-+#0 ", *fmt))
+	{
+		if (*fmt == '-')
+			arg->fmt.minus = 1;
+		else if (*fmt == '+')
+			arg->fmt.plus = 1;
+		else if (*fmt == ' ')
+			arg->fmt.space = 1;
+		else if (*fmt == '#')
+			arg->fmt.pound = 1;
+		else if (*fmt == '0')
+			arg->fmt.zero = 1;
+		fmt++;
+	}
+	return (fmt);
 }
