@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-char	*pff_prase_precision(char *fmt, t_pf_argument *arg)
+char	*pff_parse_precision(char *fmt, t_pf_argument *arg)
 {
 	if (*fmt != '.')
 		return (fmt);

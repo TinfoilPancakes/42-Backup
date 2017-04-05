@@ -10,16 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_float.h"
+#include "ft_printf.h"
 #include <stdio.h>
-
-#define TEST_FLOAT 0.00021
 
 int main(void)
 {
-	float test_thing = 3.75;
-	// double test_thing_thing = test_thing;
-	printf("std printf: %10.2f\n", test_thing);
-	printf("ft  printf: %s\n", FTOA_B(test_thing, 6));
+	t_pf_argument arg_test;
+	char	test_str[] = "-#4.2luEND";
+	char	*iter = test_str;
+	arg_test = pf_parse_string(&iter);
+	printf("argument_size : %lu\n", arg_test.arg_length);
+	printf("actual arg_size : %lu\n", sizeof(unsigned long));
+	printf("remaining str : %s\n", iter);
 	return 0;
 }

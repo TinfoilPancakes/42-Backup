@@ -115,3 +115,13 @@ C_FILES +=	ft_swap.c \
 C_FILES +=	f64_expb.c \
 			f64_expd.c \
 			f64_toa_gen.c
+
+# Printf files (guh...)
+C_FILES +=	pf_argument.c \
+			pf_parse_string.c \
+			pff_parse_conversion.c \
+			pff_parse_format.c \
+			pff_parse_length.c \
+			pff_parse_length.c \
+			pff_parse_min_width.c \
+			pff_parse_precision.c

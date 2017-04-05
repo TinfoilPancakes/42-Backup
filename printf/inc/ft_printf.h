@@ -86,4 +86,16 @@ char			*pff_parse_length(char *fmt, t_pf_argument *arg);
 
 char			*pff_parse_conversion(char *fmt, t_pf_argument *arg);
 
+// Delete these later if it works...
+
+// void			pfc_arg_size_c(t_pf_argument *arg);
+
+// void			pfc_arg_size_s(t_pf_argument *arg);
+
+// void			pfc_arg_size_di(t_pf_argument *arg);
+
+// void			pfc_arg_size_oxu(t_pf_argument *arg);
+
+t_pf_argument	pf_parse_string(char **fmt_iter);
+
 #endif

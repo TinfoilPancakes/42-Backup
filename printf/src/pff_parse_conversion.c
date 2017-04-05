@@ -14,7 +14,9 @@
 #include <stddef.h>
 #include <stdint.h>
 
-static void	pfc_arg_c(t_pf_argument *arg)
+// Check Norme Compliance.
+
+static void	pfc_arg_size_c(t_pf_argument *arg)
 {
 	if (arg->len.l == 1)
 		arg->arg_length = sizeof(wchar_t[2]);
@@ -70,11 +72,27 @@ static void	pfc_arg_size_oxu(t_pf_argument *arg)
 		arg->arg_length = sizeof(unsigned int);
 }
 
+static void	(*pfc_ptrs[])(t_pf_argument *a) = {
+	&pfc_arg_size_c,
+	&pfc_arg_size_s,
+	&pfc_arg_size_di,
+	&pfc_arg_size_oxu
+};
+
+static char	pfc_indexes[] = "c\0s\1d\2i\2o\3x\3X\3u\3";
+
 char		*pff_parse_conversion(char *fmt, t_pf_argument *arg)
 {
-	arg->conversion = *fmt;
-	if (*fmt == 'c')
-		pfc_arg_c(arg);
+	char	*iter;
 
+	iter = pfc_indexes;
+	while (iter - pfc_indexes < (long)sizeof(pfc_indexes))
+	{
+		if (*iter == *fmt)
+			pfc_ptrs[(t_byte)*(iter + 1)](arg);
+		iter += 2;
+	}
+	arg->conversion = *fmt;
+	fmt++;
 	return (fmt);
 }
