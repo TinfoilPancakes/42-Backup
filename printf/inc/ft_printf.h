@@ -13,7 +13,9 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
+# include <stdarg.h>
 # include "ft_string.h"
+# include "ft_vector.h"
 
 struct	s_pf_format_flags
 {
@@ -71,10 +73,15 @@ typedef	struct s_pf_arg_format	t_pf_argument;
 
 /*
 **	This whole section is just for the conversions... FML
-**	this is one ugly thing...
 */
 
 t_pf_argument	pf_argument(void);
+
+t_pf_argument	pf_parse_string(char **fmt_iter);
+
+int				pf_convert_args(t_vector *vec, t_pf_argument *arg, va_list ap);
+
+int				ft_snprintf(char *fmt, char **buffer, va_list ap);
 
 char			*pff_parse_format(char *fmt, t_pf_argument *arg);
 
@@ -86,16 +93,6 @@ char			*pff_parse_length(char *fmt, t_pf_argument *arg);
 
 char			*pff_parse_conversion(char *fmt, t_pf_argument *arg);
 
-// Delete these later if it works...
 
-// void			pfc_arg_size_c(t_pf_argument *arg);
-
-// void			pfc_arg_size_s(t_pf_argument *arg);
-
-// void			pfc_arg_size_di(t_pf_argument *arg);
-
-// void			pfc_arg_size_oxu(t_pf_argument *arg);
-
-t_pf_argument	pf_parse_string(char **fmt_iter);
 
 #endif
