@@ -117,11 +117,11 @@ C_FILES +=	f64_expb.c \
 			f64_toa_gen.c
 
 # Printf files (guh...)
-C_FILES +=	pf_argument.c \
-			pf_parse_string.c \
-			pff_parse_conversion.c \
-			pff_parse_format.c \
-			pff_parse_length.c \
-			pff_parse_length.c \
-			pff_parse_min_width.c \
-			pff_parse_precision.c
+C_FILES +=	pf_arg.c \
+			pf_parse_arg.c \
+			pfp_conversion.c \
+			pfp_format.c \
+			pfp_length.c \
+			pfp_length.c \
+			pfp_min_width.c \
+			pfp_precision.c

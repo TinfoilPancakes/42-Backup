@@ -32,7 +32,7 @@ struct	s_pf_min_width_flag
 {
 	unsigned int	exists : 1;
 	unsigned int	star : 1;
-	unsigned int	min_width : 30;
+	signed int		min_width : 30;
 };
 
 typedef	struct s_pf_min_width_flag t_pff_min_width;
@@ -41,7 +41,7 @@ struct	s_pf_precision_flag
 {
 	unsigned int	exists : 1;
 	unsigned int	star : 1;
-	unsigned int	precision : 30;
+	signed int		precision : 30;
 };
 
 typedef	struct s_pf_precision_flag	t_pff_precision;
@@ -58,6 +58,11 @@ struct	s_pf_length_flag
 
 typedef	struct s_pf_length_flag t_pff_length;
 
+/*
+**	After several refactors, now stores a pointer to total bytes written.
+**	This is to allow for the %n conversion specifier, also to prevent a global.
+*/
+
 struct	s_pf_arg_format
 {
 	t_pff_format	fmt;
@@ -65,34 +70,61 @@ struct	s_pf_arg_format
 	t_pff_precision	prec;
 	t_pff_length	len;
 	char			conversion;
-	size_t			arg_length;
-	void			*arg;
+	int				*bytes_out;
 };
 
-typedef	struct s_pf_arg_format	t_pf_argument;
-
 /*
-**	This whole section is just for the conversions... FML
+**	I feel like I should rename t_pf_arg to t_pf_arg...
+**	Refactoring is annoying without proper tools.
 */
 
-t_pf_argument	pf_argument(void);
+typedef	struct s_pf_arg_format	t_pf_arg;
 
-t_pf_argument	pf_parse_string(char **fmt_iter);
+/*
+**	Parsing...
+**	Seems to be working consistently.
+** 	- Modified to allow va_list to be passed so I can grab
+**	  precision & min width variables if '*' is used.
+*/
 
-int				pf_convert_args(t_vector *vec, t_pf_argument *arg, va_list ap);
+t_pf_arg	pf_arg(void);
 
-int				ft_snprintf(char *fmt, char **buffer, va_list ap);
+t_pf_arg	pf_parse_arg(char **fmt_iter, va_list ap, int *bytes_out);
 
-char			*pff_parse_format(char *fmt, t_pf_argument *arg);
+char		*pfp_format(char *fmt, t_pf_arg *arg);
 
-char			*pff_parse_min_width(char *fmt, t_pf_argument *arg);
+char		*pfp_min_width(char *fmt, t_pf_arg *arg);
 
-char			*pff_parse_precision(char *fmt, t_pf_argument *arg);
+char		*pfp_precision(char *fmt, t_pf_arg *arg);
 
-char			*pff_parse_length(char *fmt, t_pf_argument *arg);
+char		*pfp_length(char *fmt, t_pf_arg *arg);
 
-char			*pff_parse_conversion(char *fmt, t_pf_argument *arg);
+char		*pfp_conversion(char *fmt, t_pf_arg *arg);
 
+/*
+**	Conversions...
+**	char * conversion_function(t_pf_arg , va_list)
+**	returns null if error in format.
+**	Also the t_pfc_method typdef is really fucking ugly...
+*/
 
+typedef	char *(*t_pfc_method)(t_pf_arg arg, va_list ap);
+
+# define PF_CONVERSIONS "%cCsSdDioOxXuUfFpn"
+# define PF_CONV_INDEX	"\1\2\2\3\3\4\4\4\5\5\6\6\7\7\x8\x8\x9\xA"
+
+char		*pfc_percent(t_pf_arg arg, va_list ap);
+
+char		*pfc_char(t_pf_arg arg, va_list ap);
+
+char		*pfc_string(t_pf_arg arg, va_list ap);
+
+char		*pf_convert_arg(t_pf_arg arg, va_list ap);
+
+int			ft_snprintf(char *fmt, char **buffer, va_list ap);
+
+/*
+**	Formatting conversion output strings...
+*/
 
 #endif

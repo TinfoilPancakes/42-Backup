@@ -1,41 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pff_prase_precision.c                              :+:      :+:    :+:   */
+/*   pfp_format.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppatil <ppatil@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/13 12:12:46 by ppatil            #+#    #+#             */
-/*   Updated: 2017/03/13 12:12:46 by ppatil           ###   ########.fr       */
+/*   Created: 2017/03/13 11:56:38 by ppatil            #+#    #+#             */
+/*   Updated: 2017/03/13 11:56:38 by ppatil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*pff_parse_precision(char *fmt, t_pf_argument *arg)
+char	*pfp_format(char *fmt, t_pf_arg *arg)
 {
-	if (*fmt != '.')
-		return (fmt);
-	fmt++;
-	arg->prec.exists = 1;
-	if (*fmt == '*')
-	{
-		arg->prec.star = 1;
-		fmt++;
-	}
-	else if (ft_isdigit(*fmt) || *fmt == '-')
+	while (ft_strchr("-+#0 ", *fmt))
 	{
 		if (*fmt == '-')
-		{
-			arg->prec.exists = 0;
-			fmt++;
-		}
-		else
-			arg->prec.precision = ft_atoi(fmt);
-		while (ft_isdigit(*fmt))
-			fmt++;
+			arg->fmt.minus = 1;
+		else if (*fmt == '+')
+			arg->fmt.plus = 1;
+		else if (*fmt == ' ')
+			arg->fmt.space = 1;
+		else if (*fmt == '#')
+			arg->fmt.pound = 1;
+		else if (*fmt == '0')
+			arg->fmt.zero = 1;
+		fmt++;
 	}
-	else
-		arg->prec.precision = 0;
 	return (fmt);
 }

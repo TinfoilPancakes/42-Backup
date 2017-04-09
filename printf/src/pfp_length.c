@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pff_parse_format.c                                 :+:      :+:    :+:   */
+/*   pfp_length.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppatil <ppatil@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/13 11:56:38 by ppatil            #+#    #+#             */
-/*   Updated: 2017/03/13 11:56:38 by ppatil           ###   ########.fr       */
+/*   Created: 2017/03/13 12:20:54 by ppatil            #+#    #+#             */
+/*   Updated: 2017/03/13 12:20:54 by ppatil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*pff_parse_format(char *fmt, t_pf_argument *arg)
+char	*pfp_length(char *fmt, t_pf_arg *arg)
 {
-	while (ft_strchr("-+#0 ", *fmt))
+	while (ft_strchr("hljztL", *fmt))
 	{
-		if (*fmt == '-')
-			arg->fmt.minus = 1;
-		else if (*fmt == '+')
-			arg->fmt.plus = 1;
-		else if (*fmt == ' ')
-			arg->fmt.space = 1;
-		else if (*fmt == '#')
-			arg->fmt.pound = 1;
-		else if (*fmt == '0')
-			arg->fmt.zero = 1;
+		if (*fmt == 'h')
+			arg->len.h++;
+		if (*fmt == 'l')
+			arg->len.l++;
+		if (*fmt == 'j')
+			arg->len.j = 1;
+		if (*fmt == 'z')
+			arg->len.z = 1;
+		if (*fmt == 't')
+			arg->len.z = 1;
+		if (*fmt == 'L')
+			arg->len.L = 1;
 		fmt++;
 	}
 	return (fmt);

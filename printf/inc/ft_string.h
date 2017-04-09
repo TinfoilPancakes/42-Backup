@@ -14,9 +14,12 @@
 # define FT_STRING_H
 
 # include <string.h>
+# include <wchar.h>
 # include "ft_typedefs.h"
 
 size_t	ft_strlen(const char *s);
+
+size_t	ft_wstrlen(const wchar_t *s);
 
 size_t	ft_strlcat(char *s1, const char *s2, size_t size);
 

@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pff_parse_min_width.c                              :+:      :+:    :+:   */
+/*   pf_arg.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppatil <ppatil@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/13 12:05:00 by ppatil            #+#    #+#             */
-/*   Updated: 2017/03/13 12:05:00 by ppatil           ###   ########.fr       */
+/*   Created: 2017/03/13 11:54:51 by ppatil            #+#    #+#             */
+/*   Updated: 2017/03/13 11:54:51 by ppatil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_memory.h"
 
-char	*pff_parse_min_width(char *fmt, t_pf_argument *arg)
+t_pf_arg	pf_arg(void)
 {
-	if (*fmt == '*')
-	{
-		arg->mw.exists = 1;
-		arg->mw.star = 1;
-		fmt++;
-	}
-	else if (ft_isdigit(*fmt))
-	{
-		arg->mw.exists = 1;
-		arg->mw.min_width = ft_atoi(fmt);
-		while (ft_isdigit(*fmt))
-			fmt++;
-	}
-	return (fmt);
+	t_pf_arg arg;
+
+	ft_bzero(&arg, sizeof(t_pf_arg));
+	return (arg);
 }

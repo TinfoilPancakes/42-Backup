@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pff_parse_length.c                                 :+:      :+:    :+:   */
+/*   pfp_min_width.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppatil <ppatil@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/13 12:20:54 by ppatil            #+#    #+#             */
-/*   Updated: 2017/03/13 12:20:54 by ppatil           ###   ########.fr       */
+/*   Created: 2017/03/13 12:05:00 by ppatil            #+#    #+#             */
+/*   Updated: 2017/03/13 12:05:00 by ppatil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*pff_parse_length(char *fmt, t_pf_argument *arg)
+char	*pfp_min_width(char *fmt, t_pf_arg *arg)
 {
-	while (ft_strchr("hljztL", *fmt))
+	if (*fmt == '*')
 	{
-		if (*fmt == 'h')
-			arg->len.h++;
-		if (*fmt == 'l')
-			arg->len.l++;
-		if (*fmt == 'j')
-			arg->len.j = 1;
-		if (*fmt == 'z')
-			arg->len.z = 1;
-		if (*fmt == 't')
-			arg->len.z = 1;
-		if (*fmt == 'L')
-			arg->len.L = 1;
+		arg->mw.exists = 1;
+		arg->mw.star = 1;
 		fmt++;
+	}
+	else if (ft_isdigit(*fmt))
+	{
+		arg->mw.exists = 1;
+		arg->mw.min_width = ft_atoi(fmt);
+		while (ft_isdigit(*fmt))
+			fmt++;
 	}
 	return (fmt);
 }

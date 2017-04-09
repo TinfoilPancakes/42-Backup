@@ -1,25 +1,31 @@
 #include "ft_printf.h"
 #include "ft_vector.h"
-#include "ft_output.h"
 
-int	ft_snprintf(char *fmt, char **buffer, va_list ap)
+/*
+**	
+*/
+
+int	ft_snprintf(char *fmt, char **s, va_list ap)
 {
 	t_vector		buff;
-	t_pf_argument	current_arg;
+	t_pf_arg		current_arg;
+	char			*temp_str;
+	int				rv;
 
 	buff = ft_vec_new(sizeof(char));
 	while (*fmt)
 	{
-		if (*fmt == '%')
-		{
-			current_arg = pf_parse_string(&fmt);
-			if (pf_convert_args(&buff, &current_arg, ap) > 0)
-				return (-1);
-		}
-		else
+		if (*fmt != '%')
 			ft_vec_push(&buff, fmt);
+		else 
+		{
+			// Parse Argument.
+			// Convert
+			// Format
+			// Push to buffer.
+		}
 		fmt++;
 	}
-	*buffer = buff.data;
-	return (0);
+	*s = (char *)buff.data;
+	return (buff.count);
 }
