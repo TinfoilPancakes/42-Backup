@@ -1,9 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   pf_convert_arg.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ppatil <ppatil@student.42.us.org>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/04/09 02:32:02 by ppatil            #+#    #+#             */
+/*   Updated: 2017/04/16 11:23:43 by ppatil           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 const t_pfc_method pfc_dispatch[] = {
 	NULL,
 	&pfc_percent,
-	&pfc_char
+	&pfc_char,
+	
 };
 
 char	*pf_convert_arg(t_pf_arg arg, va_list ap)

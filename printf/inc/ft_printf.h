@@ -121,7 +121,7 @@ char		*pfc_string(t_pf_arg arg, va_list ap);
 
 char		*pf_convert_arg(t_pf_arg arg, va_list ap);
 
-int			ft_snprintf(char *fmt, char **buffer, va_list ap);
+int			ft_vsprintf(char *fmt, char **buffer, va_list ap);
 
 /*
 **	Formatting conversion output strings...

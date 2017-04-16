@@ -11,16 +11,18 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "ft_output.h"
 #include <stdio.h>
+
+// Huh...
 
 int main(void)
 {
-	t_pf_arg arg_test;
-	char	test_str[] = "-#4.2luEND";
-	char	*iter = test_str;
-	arg_test = pf_parse_arg(&iter, NULL);
-	printf("conversion specifier : %c\n", arg_test.conversion);
-	printf("actual arg_size : %lu\n", sizeof(unsigned long));
-	printf("remaining str : %1.23s\n", iter);
+	wchar_t test = 20153;
+	char *rv;
+	ft_wctoa_utf8(test, &rv);
+	ft_putstr(rv);
+	ft_memdel((void **)&rv);
+	ft_putstr("\n");
 	return 0;
 }

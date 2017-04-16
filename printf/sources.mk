@@ -78,6 +78,11 @@ C_FILES +=	ft_strlen.c \
 			ft_atoi.c \
 			ft_atoi_generic.c
 
+# Special wchar_t String Tools
+
+C_FILES +=	ft_wstrlen.c \
+			ft_wctoa_utf8.c
+
 # Knuth Morris Pratt String Search
 C_FILES +=	kmp_strstr.c \
 			kmp_strnstr.c \
