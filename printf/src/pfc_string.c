@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vsprintf.c                                      :+:      :+:    :+:   */
+/*   pfc_string.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppatil <ppatil@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/16 09:53:26 by ppatil            #+#    #+#             */
-/*   Updated: 2017/04/16 11:37:49 by ppatil           ###   ########.fr       */
+/*   Created: 2017/04/16 14:56:57 by ppatil            #+#    #+#             */
+/*   Updated: 2017/04/16 15:14:53 by ppatil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "ft_vector.h"
+#include "ft_string.h"
 
-int	ft_vsprintf(char *fmt, char **s, va_list ap)
+static char	*pfc_wchar_string(va_list ap)
 {
-	t_vector		buff;
-	t_pf_arg		current_arg;
-	char			*temp_str;
-	int				rv;
+	wchar_t	*p;
 
-	buff = ft_vec_new(sizeof(char));
-	while (*fmt)
-	{
-		if (*fmt != '%')
-			ft_vec_push(&buff, fmt);
-		else 
-		{
-			// Parse Argument.
-			// Convert
-			// Format
-			// Push to buffer.
-		}
-		fmt++;
-	}
-	ft_vec_push(&buff, "\0");
-	*s = (char *)buff.data;
-	return (buff.count);
+	p = va_arg(ap, wchar_t *);
+	return (ft_watoa_utf8(p));
+}
+
+char		*pfc_string(t_pf_arg arg, va_list ap)
+{
+	char *rv;
+
+	rv = NULL;
+	if (arg.len.l)
+		rv = pfc_wchar_string(ap);
+	else
+		rv = va_arg(ap, char *);
+	return (rv);
 }

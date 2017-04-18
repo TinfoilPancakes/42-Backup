@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vsprintf.c                                      :+:      :+:    :+:   */
+/*   ft_watoa_utf8.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ppatil <ppatil@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/16 09:53:26 by ppatil            #+#    #+#             */
-/*   Updated: 2017/04/16 11:37:49 by ppatil           ###   ########.fr       */
+/*   Created: 2017/04/16 11:32:49 by ppatil            #+#    #+#             */
+/*   Updated: 2017/04/16 14:56:34 by ppatil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_string.h"
 #include "ft_vector.h"
 
-int	ft_vsprintf(char *fmt, char **s, va_list ap)
+char	*ft_watoa_utf8(wchar_t *ws)
 {
-	t_vector		buff;
-	t_pf_arg		current_arg;
-	char			*temp_str;
-	int				rv;
+	t_vector	buff;
+	char		*tmp;
 
 	buff = ft_vec_new(sizeof(char));
-	while (*fmt)
+	while (*ws)
 	{
-		if (*fmt != '%')
-			ft_vec_push(&buff, fmt);
-		else 
-		{
-			// Parse Argument.
-			// Convert
-			// Format
-			// Push to buffer.
-		}
-		fmt++;
+		ft_wctoa_utf8(*ws, &tmp);
+		ft_vec_append(&buff, tmp, ft_strlen(tmp));
+		ft_memdel((void **)&tmp);
+		ws++;
 	}
-	ft_vec_push(&buff, "\0");
-	*s = (char *)buff.data;
-	return (buff.count);
+	return (buff.data);
 }

@@ -81,7 +81,8 @@ C_FILES +=	ft_strlen.c \
 # Special wchar_t String Tools
 
 C_FILES +=	ft_wstrlen.c \
-			ft_wctoa_utf8.c
+			ft_wctoa_utf8.c \
+			ft_watoa_utf8.c
 
 # Knuth Morris Pratt String Search
 C_FILES +=	kmp_strstr.c \

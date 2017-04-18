@@ -6,7 +6,7 @@
 /*   By: ppatil <ppatil@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 11:18:15 by ppatil            #+#    #+#             */
-/*   Updated: 2016/09/28 17:53:07 by ppatil           ###   ########.fr       */
+/*   Updated: 2017/04/16 14:56:27 by ppatil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include "ft_typedefs.h"
 
 void	ft_wctoa_utf8(wint_t wc, char **rv);
+
+char	*ft_watoa_utf8(wchar_t *ws);
 
 size_t	ft_wstrlen(const wchar_t *s);
 
