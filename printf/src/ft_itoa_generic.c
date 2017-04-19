@@ -6,7 +6,7 @@
 /*   By: ppatil <ppatil@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/26 09:10:42 by ppatil            #+#    #+#             */
-/*   Updated: 2016/09/26 09:27:56 by ppatil           ###   ########.fr       */
+/*   Updated: 2017/04/18 16:49:08 by ppatil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "ft_memory.h"
 #include "ft_math.h"
 
-char	*ft_itoa_generic(long n, size_t b, size_t md, const char *fmt)
+char	*ft_itoa_generic(long long n, size_t b, size_t md, const char *fmt)
 {
 	size_t	digit_count;
 	char	*num_string;

@@ -6,7 +6,7 @@
 /*   By: ppatil <ppatil@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/22 11:18:15 by ppatil            #+#    #+#             */
-/*   Updated: 2017/04/16 14:56:27 by ppatil           ###   ########.fr       */
+/*   Updated: 2017/04/18 16:48:19 by ppatil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 
 char	*ft_strsub(const char *s, unsigned int start, size_t n);
 
-char	*ft_itoa_generic(long n, size_t b, size_t md, const char *fmt);
+char	*ft_itoa_generic(long long n, size_t b, size_t md, const char *fmt);
 
 char	*ft_itoa(int n);
 

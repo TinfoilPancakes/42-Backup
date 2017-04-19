@@ -6,7 +6,7 @@
 /*   By: ppatil <ppatil@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/28 18:01:39 by ppatil            #+#    #+#             */
-/*   Updated: 2016/09/28 18:01:39 by ppatil           ###   ########.fr       */
+/*   Updated: 2017/04/18 16:48:17 by ppatil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ long	ft_abs(long n);
 
 double	ft_pow(double num, t_i64 exp);
 
-size_t	ft_count_digits(long n, size_t base);
+size_t	ft_count_digits(long long n, size_t base);
 
 #endif
